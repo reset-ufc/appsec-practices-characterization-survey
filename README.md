@@ -7,7 +7,7 @@ _**Paper Description:**_
 
 ## 📁 Repository Structure
 
-The repository follows the structure shown in the reference image:
+The repository is structured as follows:
 
 ```
 analysis-security-survey/
