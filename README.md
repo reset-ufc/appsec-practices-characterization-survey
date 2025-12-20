@@ -83,5 +83,7 @@ jupyter notebook
 1. `characterization_analysis_of_the_participants.ipynb`  
 2. `RQ1.ipynb`  
 3. `RQ2.ipynb`
+4. `RQ3.ipynb`
+5. `Analises_RQ3_pt2.ipynb`
 
 All generated plots and outputs will automatically appear inside the `results/` folder.
