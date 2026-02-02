@@ -1,9 +1,51 @@
 # 🎓 Characterization of Appsec Practices and the Adoption of Automated Security Tools: A Comprehensive Survey With Brazilian Developers
 
-_**Paper Description:**_  
-*(Insert the full description of the paper here.)*
+## Context
 
+*The adoption of Application Security (AppSec) practices is essential for protecting software systems against vulnerabilities and cyber threats. However, the effectiveness of these practices largely depends on their consistent adoption and on developers’ perceptions regarding ease of use, perceived effectiveness, essentiality, and applicability within real-world software development contexts.*
+
+## Goal
+
+*This study aims to characterize a set of AppSec practices in terms of frequency of use, ease of application, perceived effectiveness, and perceived essentiality. Additionally, it investigates how automated security tools are incorporated into the software development process and identifies the main challenges faced by Brazilian developers in their adoption.*
 ---
+
+## 🔬 Methodology
+
+This study followed a structured, multi-step process to define and evaluate AppSec practices:
+
+### 📚 1. Literature Review
+
+An extensive survey of the scientific literature was conducted to identify an initial, comprehensive set of software security practices.
+
+### 🧠 2. Expert Refinement
+
+The initial set was iteratively filtered, refined, and grouped by experts in Software Engineering and Software Security to:
+
+- reduce redundancy,
+
+- harmonize terminology, and
+
+- ensure conceptual clarity and practical relevance.
+
+### ✅ 3. Final AppSec Set
+
+This process resulted in a final set of 16 Application Security (AppSec) practices.
+
+### 📝 4. Questionnaire & Data Collection
+
+A questionnaire based on the final set was administered to software developers working in Brazil, yielding 83 valid responses.
+
+### 📊 5. Data Scope
+
+The questionnaire captured:
+
+- 👤 Participants’ profiles
+
+- 🔐 Security-related experience
+
+- 📈 Perceptions and adoption of AppSec practices
+
+- 🛠️ Use of automated security tools
 
 ## 📁 Repository Structure
 
@@ -12,25 +54,23 @@ The repository is structured as follows:
 ```
 analysis-security-survey/
 │
-├── data/
+├── data/: Input datasets for analysis
 │
-├── results/
+├── results/: Results tables for each research question (RQ)
 │
-├── venv/
+├── study_artifacts: Materials used to support the study analyses. 
 │
-├── .gitignore
+├── characterization_analysis_of_the_participants.ipynb: Code for performing a descriptive analysis to characterize the study participants.
 │
-├── characterization_analysis_of_the_participants.ipynb
+├── requirements.txt: List of required Python packages;
 │
-├── LICENSE
+├── RQ1.ipynb: Code for generating the results table and plots related to RQ1;
 │
-├── requirements.txt
+└── RQ2.ipynb: Code for generating the results table and plots related to RQ2;
 │
-├── RQ1.ipynb
+└── RQ3.ipynb: Code for generating the results table and plots related to RQ3;
 │
-└── RQ2.ipynb
-│
-└── RQ3.ipynb
+└── RQ3_part2_analysis.ipynb: Extension of the analyses from the first code (‘RQ3.ipynb’).
 ```
 
 ---
@@ -84,6 +124,6 @@ jupyter notebook
 2. `RQ1.ipynb`  
 3. `RQ2.ipynb`
 4. `RQ3.ipynb`
-5. `Analises_RQ3_pt2.ipynb`
+5. `RQ3_part2_analysis.ipynb`
 
-All generated plots and outputs will automatically appear inside the `results/` folder.
+The plots and tables can be found either in the code files or in the results directories (`results/`).
