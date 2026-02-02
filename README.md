@@ -2,13 +2,13 @@
 
 ## Context
 
-*The adoption of Application Security (AppSec) practices is essential for protecting software systems against vulnerabilities and cyber threats. However, the effectiveness of these practices largely depends on their consistent adoption and on developers’ perceptions regarding ease of use, perceived effectiveness, essentiality, and applicability within real-world software development contexts.*
+The adoption of Application Security (AppSec) practices is essential for protecting software systems against vulnerabilities and cyber threats. However, the effectiveness of these practices largely depends on their consistent adoption and on developers’ perceptions regarding ease of use, perceived effectiveness, essentiality, and applicability within real-world software development contexts.
 
 ## Goal
 
-*This study aims to characterize a set of AppSec practices in terms of frequency of use, ease of application, perceived effectiveness, and perceived essentiality. Additionally, it investigates how automated security tools are incorporated into the software development process and identifies the main challenges faced by Brazilian developers in their adoption.*
----
+This study aims to characterize a set of AppSec practices in terms of frequency of use, ease of application, perceived effectiveness, and perceived essentiality. Additionally, it investigates how automated security tools are incorporated into the software development process and identifies the main challenges faced by Brazilian developers in their adoption.
 
+---
 ## 🔬 Methodology
 
 This study followed a structured, multi-step process to define and evaluate AppSec practices:
