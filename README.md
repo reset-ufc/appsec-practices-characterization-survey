@@ -1,4 +1,4 @@
-# 🎓 Characterization of Appsec Practices and the Adoption of Automated Security Tools: A Comprehensive Survey With Brazilian Developers
+# 🎓 How AppSec Practices and Automated Security Tools Are Adopted in Practice: Brazilian Developers’ Perspectives
 
 ## Context
 
