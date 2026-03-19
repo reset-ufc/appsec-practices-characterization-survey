@@ -1,51 +1,23 @@
-# 🎓 How AppSec Practices and Automated Security Tools Are Adopted in Practice: Brazilian Developers’ Perspectives
+# 🎓 Essential, but Ignored: Developers’ Perspectives on AppSec Practices and Automated Security Tools
 
 ## Context
 
-The adoption of Application Security (AppSec) practices is essential for protecting software systems against vulnerabilities and cyber threats. However, the effectiveness of these practices largely depends on their consistent adoption and on developers’ perceptions regarding ease of use, perceived effectiveness, essentiality, and applicability within real-world software development contexts.
+Application Security (AppSec) practices are essential for protecting software systems against vulnerabilities and cyber threats. However, their effectiveness depends on consistent adoption, which is often influenced by developers’ perceptions and practical constraints.
 
 ## Goal
 
-This study aims to characterize a set of AppSec practices in terms of frequency of use, ease of application, perceived effectiveness, and perceived essentiality. Additionally, it investigates how automated security tools are incorporated into the software development process and identifies the main challenges faced by Brazilian developers in their adoption.
-
+This study investigates how developers perceive, adopt, and prioritize AppSec practices, and how automated security tools are integrated into development workflows.
 ---
-## 🔬 Methodology
+## 🔬 Method
 
-This study followed a structured, multi-step process to define and evaluate AppSec practices:
+To achieve these objectives, we conducted an empirical, developer-centered study grounded in a curated set of 16 AppSec practices derived from prior research and expert validation. Based on this set, we designed and administered a questionnaire to software developers working in the software industry, yielding 83 valid responses. The questionnaire captured participants’ profiles, security-related experience, perceptions of AppSec practices, and the adoption and use of automated security tools.
 
-### 📚 1. Literature Review
+## 📚 Results
+The results reveal a heterogeneous landscape of AppSec adoption, with substantial variation across practices, with a notable gap between perceived essentiality and actual use. While some practices and tools are widely adopted, others remain underused due to usability and integration challenges. Automated tool adoption is similarly affected by factors such as false positives, learning curves, and difficulties integrating tools into existing development workflows.
 
-An extensive survey of the scientific literature was conducted to identify an initial, comprehensive set of software security practices.
-
-### 🧠 2. Expert Refinement
-
-The initial set was iteratively filtered, refined, and grouped by experts in Software Engineering and Software Security to:
-
-- reduce redundancy,
-
-- harmonize terminology, and
-
-- ensure conceptual clarity and practical relevance.
-
-### ✅ 3. Final AppSec Set
-
-This process resulted in a final set of 16 Application Security (AppSec) practices.
-
-### 📝 4. Questionnaire & Data Collection
-
-A questionnaire based on the final set was administered to software developers working in Brazil, yielding 83 valid responses.
-
-### 📊 5. Data Scope
-
-The questionnaire captured:
-
-- 👤 Participants’ profiles
-
-- 🔐 Security-related experience
-
-- 📈 Perceptions and adoption of AppSec practices
-
-- 🛠️ Use of automated security tools
+## 🧠 Conclusion
+Our findings provide developer-centered empirical evidence that AppSec practices and automated tools,
+although widely regarded as essential, are not consistently adopted in practice. These insights inform the design of tools, training initiatives, and organizational strategies to support more effective and sustainable integration of security into software development.
 
 ## 📁 Repository Structure
 
