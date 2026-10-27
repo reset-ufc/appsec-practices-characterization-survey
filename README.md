@@ -1,26 +1,26 @@
 # 🎓 Essential, but Ignored: Developers’ Perspectives on AppSec Practices and Automated Security Tools
 
-Replication package of the study. It contains the survey data, the analysis notebooks and scripts, and all the results (tables and figures) reported in the paper.
+This replication package accompanies the study. It includes questionnaire materials, survey data, manually developed qualitative codebooks, analysis notebooks and scripts, and the tables and figures reported in the paper. The notebooks reproduce computational analyses; qualitative coding was performed manually and is documented separately.
 
 ## Context
 
-Application Security (AppSec) practices are essential for protecting software systems against vulnerabilities and cyber threats. However, their effectiveness depends on consistent adoption, which is often influenced by developers’ perceptions and practical constraints.
+Application Security (AppSec) practices are essential for protecting software systems against vulnerabilities and cyber threats. However, their practical effectiveness is closely related to consistent adoption, while developers report a range of practical constraints surrounding their use.
 
 ## Goal
 
-This study investigates how developers perceive, adopt, and prioritize AppSec practices, and how automated security tools are integrated into development workflows.
+This study investigates how developers perceive and report using AppSec practices, and how they report using automated security tools within development workflows.
 
 ## 🔬 Method
 
-We conducted an empirical, developer-centered study grounded in a curated set of 16 AppSec practices derived from prior research and expert validation. Based on this set, we designed and administered a questionnaire to software developers working in the software industry, yielding 83 valid responses. The questionnaire captured participants’ profiles, security-related experience, perceptions of AppSec practices, and the adoption and use of automated security tools.
+To achieve these objectives, we conducted an empirical, developer-centered study grounded in a curated set of 16 AppSec practices, including Secure Coding, Code Review, Threat Modeling, and Fuzz Testing, derived from prior research and refined through expert analysis by three researchers. Based on this set, we designed and administered a questionnaire to Brazilian software professionals working in the software industry, yielding 83 valid responses. The questionnaire captured participants’ profiles, security-related experience, perceptions of AppSec practices, and reported adoption and use of automated security tools.
 
 ## 📚 Results
 
-The results reveal a heterogeneous landscape of AppSec adoption, with substantial variation across practices, with a notable gap between perceived essentiality and actual use. While some practices and tools are widely adopted, others remain underused due to usability and integration challenges. Automated tool adoption is similarly affected by factors such as false positives, learning curves, and difficulties integrating tools into existing development workflows.
+The results reveal a heterogeneous landscape of reported AppSec use, with a notable gap between perceived essentiality and reported frequency of use. Practices such as Code Review and Secure Coding are more frequently reported, whereas Penetration Testing and External Security Auditing are reported less frequently despite their comparatively higher perceived essentiality. Participants also report challenges associated with automated security tool use, including false positives, learning curves, and difficulties integrating tools into existing development workflows.
 
 ## 🧠 Conclusion
 
-Our findings provide developer-centered empirical evidence that AppSec practices and automated tools, although widely regarded as essential, are not consistently adopted in practice. These insights inform the design of tools, training initiatives, and organizational strategies to support more effective and sustainable integration of security into software development.
+Our findings provide developer-centered empirical evidence that AppSec practices perceived as essential are not always reported as frequently used, while automated security tool use is accompanied by recurring challenges related to integration, usability, and tool output quality. These insights can inform the design of tools, training initiatives, and organizational strategies aimed at better supporting the integration of security into software development.
 
 ---
 
@@ -30,11 +30,11 @@ Our findings provide developer-centered empirical evidence that AppSec practices
 appsec-practices-characterization-survey/
 ├── data/                                  Input data (survey answers, in Portuguese)
 │   ├── survey_all_responses_ptbr.xlsx     All answers to the questionnaire
-│   └── qualitative_responses_ptbr.xlsx    Answers used in RQ2 and RQ3 (automated security tools)
+│   └── qualitative_responses_ptbr.xlsx    Open-ended responses used in qualitative analyses
 ├── qualitative_analysis/                  Codebooks of the open questions Q16, Q18, Q19, Q27 and Q31
 │                                          (manual coding; Portuguese and English)
 ├── study_artifacts/                       Questionnaire and informed consent form (Portuguese and English)
-├── results/                               All outputs, generated by the notebooks and the script
+├── results/                               Generated tables, spreadsheets, and figures
 │   ├── characterization/
 │   ├── RQ1/
 │   ├── RQ2/
@@ -63,16 +63,22 @@ appsec-practices-characterization-survey/
 
 ### Analysis decisions
 
-- **Sample**: 83 participants with direct or indirect experience with security in software development (participants without any experience are excluded).
-- **"Não Aplicável" (Not Applicable)** answers are excluded from the means, the tests and the correlations (each correlation uses only the participants who rated both attributes).
-- **Security specialists** are the participants who reported at least one role explicitly focused on security (Q6): Cryptographer, Penetration tester, Privacy engineer, Security engineer, or a security role written in the "Other" field (e.g., Security Analyst, AppSec, SOC). DevOps engineer alone is not considered a security role.
-- **Multiple comparisons**: p-values are adjusted with the Holm-Bonferroni method; each family has the 16 tests (one per practice) of a pair of attributes (RQ1) or of a group comparison and attribute (RQ2).
-- **RQ2** uses two-sided Mann-Whitney U tests.
-- **Q28 and Q29** were only shown to the 69 participants who use automated security tools (Q23), so their percentages refer to them.
+- **Sample:** We analyze 83 eligible respondents who reported either direct (n=62) or indirect (n=21) professional exposure to security in software development. Respondents reporting neither were excluded.
+- **Unweighted RQ1 analysis:** Each valid participant response contributes equally. For descriptive comparisons, the mean of valid responses is divided by the maximum score for that dimension (4 for frequency of use; 5 for ease of use, perceived effectiveness, and essentiality). No expertise-based weights are applied. Spearman correlations use original participant-level responses, not normalized aggregate scores.
+- **Not Applicable responses:** For AppSec practice perceptions (Q17 and Q20–Q22), "Não Aplicável" ("Not Applicable") is treated as missing and excluded from descriptive means and RQ2 group tests. RQ1 correlations use only participants with valid responses to both dimensions of a pair. In Q24, however, "Not Applicable" denotes reported non-use of the corresponding *tool category* and is retained as a response category.
+- **RQ2 comparison groups:** Direct (n=62) vs. indirect (n=21) security experience; large (n=65; at least 100 employees) vs. small (n=16; up to 99 employees) organizations; and security specialists (n=57) vs. non-specialists (n=26). The two respondents with unknown organization size are excluded only from analyses requiring that variable.
+- **Security specialists:** Classification is based on Q6. Respondents reporting at least one explicitly security-focused role (e.g., Cryptographer, Penetration Tester, Privacy Engineer, Security Engineer, Security Analyst, DevSecOps, AppSec, or SOC Analyst) are classified as specialists; DevOps Engineer alone is not considered a specialist role.
+- **Group tests (RQ2):** We use two-sided Mann-Whitney U (Wilcoxon rank-sum) tests and Cliff's Delta to describe the magnitude and direction of group differences. Group membership is not interpreted causally.
+- **Multiple comparisons:** For RQ1, Holm-adjusted p-values are computed across the 96 Spearman correlations (16 practices × 6 dimension pairs). For RQ2, Holm correction is applied separately within each family of 16 practice-level tests for a given grouping factor and perception dimension. Statistical significance is assessed using adjusted p-values below 0.05.
+- **Tool adoption (RQ3):** Q23 distinguishes participants reporting use (n=49), partial use (n=20), and non-use (n=14) of automated security tools. Q24–Q30 were shown to the 69 participants who reported use or partial use. Q28 and Q29 counts and percentages refer to those 69 participants unless a smaller group denominator is explicitly reported. Q25 records specific tools used *currently or previously*; consequently, a tool reported in Q25 does not necessarily imply current use of its category in Q24.
+- **Qualitative material:** Codebooks for Q16, Q18, Q19, Q27, and Q31 document manual analysis; executing the notebooks does not reproduce the human coding process.
 
-The survey data are in Portuguese: the notebooks read the original questions and answer options, and all outputs are in English.
+The questionnaire responses are in Portuguese, and notebooks use the original question wording and response options. The `study_artifacts/` and `qualitative_analysis/` folders provide Portuguese and English materials as indicated in the repository structure.
 
----
+### Data privacy and release checks
+
+The questionnaire included optional contact information fields (Q30 and Q34). These fields are excluded from the publicly released dataset. Survey responses, qualitative excerpts, and generated outputs were reviewed to remove direct personal identifiers. Participant identifiers are used only to support traceability across study artifacts.
+
 
 ## ⚙️ Requirements
 
@@ -104,7 +110,7 @@ pip install -r requirements.txt
 4. `RQ3.ipynb`
 5. `RQ3_part2_analysis.ipynb`
 
-Interactively, with `jupyter notebook`, or all at once from the command line:
+Run the notebooks interactively with `jupyter notebook`, or sequentially from a Linux/macOS shell:
 
 ```bash
 for notebook in characterization_analysis_of_the_participants RQ1 RQ2 RQ3 RQ3_part2_analysis; do
@@ -112,10 +118,21 @@ for notebook in characterization_analysis_of_the_participants RQ1 RQ2 RQ3 RQ3_pa
 done
 ```
 
+On Windows (PowerShell), the equivalent is:
+
+```powershell
+foreach ($notebook in @("characterization_analysis_of_the_participants", "RQ1", "RQ2", "RQ3", "RQ3_part2_analysis")) {
+  jupyter nbconvert --to notebook --execute --inplace "$notebook.ipynb"
+}
+```
+
+**Note:** The `--inplace` option overwrites the notebook files with executed versions. Work in a fresh clone or a separate working copy if you want to preserve the committed notebook outputs. Notebook execution regenerates computational results, not the manual qualitative codebooks.
+ 
+
 ### 4. Generate the LaTeX tables of RQ1 and RQ2
 
 ```bash
 python scripts/generate_latex_tables.py
 ```
 
-All outputs are written to `results/` (the folders are created if they do not exist). The plots are also shown in the notebooks.
+Generated computational outputs are written to `results/` (the folders are created if they do not exist), and plots are also displayed in the notebooks. Compare the regenerated files with the archived results to check reproducibility. Qualitative codebooks remain documented research artifacts rather than notebook-generated outputs.
