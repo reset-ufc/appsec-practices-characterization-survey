@@ -1,4 +1,4 @@
-# 🎓 Essential, but Ignored: Developers’ Perspectives on AppSec Practices and Automated Security Tools
+# 🎓 Essential, but Neglected: Developers' Perspectives on AppSec Practices and Automated Security Tools
 
 This replication package accompanies the study. It includes questionnaire materials, survey data, manually developed qualitative codebooks, analysis notebooks and scripts, and the tables and figures reported in the paper. The notebooks reproduce computational analyses; qualitative coding was performed manually and is documented separately.
 
@@ -32,8 +32,15 @@ appsec-practices-characterization-survey/
 │   ├── survey_all_responses_ptbr.xlsx     All answers to the questionnaire
 │   └── qualitative_responses_ptbr.xlsx    Open-ended responses used in qualitative analyses
 ├── qualitative_analysis/                  Codebooks of the open questions Q16, Q18, Q19, Q27 and Q31
-│                                          (manual coding; Portuguese and English)
-├── study_artifacts/                       Questionnaire and informed consent form (Portuguese and English)
+│   ├── codebook_Q16_pt_br.xlsx            Q16 codebook (Portuguese only)
+│   ├── codebook_Q18_en.xlsm               Q18 codebook (English)
+│   ├── codebook_Q18_pt_br.xlsm            Q18 codebook (Portuguese)
+│   ├── codebook_Q19_en.xlsm               Q19 codebook (English)
+│   ├── codebook_Q19_pt_br.xlsm            Q19 codebook (Portuguese)
+│   ├── codebook_Q27_en.xlsm               Q27 codebook (English)
+│   ├── codebook_Q27_pt_br.xlsm            Q27 codebook (Portuguese)
+│   ├── codebook_Q31_en.xlsm               Q31 codebook (English)
+│   └── codebook_Q31_pt_br.xlsm            Q31 codebook (Portuguese)
 ├── results/                               Generated tables, spreadsheets, and figures
 │   ├── characterization/
 │   ├── RQ1/
@@ -42,6 +49,12 @@ appsec-practices-characterization-survey/
 │   └── tools_usage_frequency_responses.xlsx
 ├── scripts/
 │   └── generate_latex_tables.py           LaTeX tables of RQ1 and RQ2
+├── study_artifacts/                       Questionnaire, consent forms, and supplementary materials
+│   ├── Script_survey_en.pdf               Questionnaire (English)
+│   ├── Script_survey_pt_br.pdf            Questionnaire (Portuguese)
+│   ├── Free_and_Informed_Consent_Form_(FICF)_en.pdf        Consent form (English)
+│   ├── Termo_de_Consentimento_Livre_e_Esclarecido_(TCLE)_pt_br.pdf  Consent form (Portuguese)
+│   └── appsec_practice_selection_and_consolidation.xlsm   AppSec practice selection and consolidation process
 ├── characterization_analysis_of_the_participants.ipynb
 ├── RQ1.ipynb
 ├── RQ2.ipynb
